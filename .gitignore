@@ -1,0 +1,9 @@
+.serena/
+/dist/
+/slackadm
+/slackadm.exe
+*.test
+coverage*
+.env*
+plan.json
+*.local.json

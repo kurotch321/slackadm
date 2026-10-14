@@ -1,0 +1,4 @@
+[
+  {"command": "channels topic", "args": {"channel": "example-project", "topic": "Example project coordination"}},
+  {"command": "channels members add", "args": {"channel": "example-project", "user": "person@example.invalid"}}
+]

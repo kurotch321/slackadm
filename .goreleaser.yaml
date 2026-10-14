@@ -1,0 +1,27 @@
+version: 2
+project_name: slackadm
+dist: dist/release
+builds:
+  - main: ./cmd/slackadm
+    binary: slackadm
+    env: [CGO_ENABLED=0]
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - README.md
+      - docs/**
+      - slack-app-manifest.json
+      - examples/**
+checksum:
+  name_template: checksums.txt
+release:
+  draft: true
+changelog:
+  use: git
