@@ -1,0 +1,2 @@
+# slackadm
+Slack Admin CLI
